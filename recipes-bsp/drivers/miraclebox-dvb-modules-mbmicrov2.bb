@@ -3,6 +3,8 @@ SECTION = "base"
 PRIORITY = "required"
 LICENSE = "CLOSED"
 
+PACKAGE_ARCH = "${MACHINE_ARCH}"
+
 KV = "4.0.1"
 SRCDATE = "20170516"
 
