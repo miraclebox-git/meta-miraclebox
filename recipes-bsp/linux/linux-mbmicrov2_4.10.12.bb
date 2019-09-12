@@ -60,6 +60,8 @@ KERNEL_OUTPUT_mips = "vmlinux"
 KERNEL_IMAGETYPE_mips = "vmlinux"
 KERNEL_IMAGEDEST_mips = "boot"
 
+KERNEL_EXTRA_ARGS = "EXTRA_CFLAGS=-Wno-attribute-alias"
+
 FILES_kernel-image_mips = "/${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}*"
 
 kernel_do_install_append_mips() {

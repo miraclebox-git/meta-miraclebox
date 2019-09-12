@@ -24,6 +24,7 @@ SRC_URI += "http://source.mynonpublic.com/ceryon/ceryon-linux-${PV}.tgz \
 	file://dvb-usb-i2c_duplicate.patch \
 	file://kernel-add-support-for-gcc6.patch \
 	file://kernel-add-support-for-gcc7.patch \
+	file://kernel-gcc8.patch \
 	file://0001-Support-TBS-USB-drivers-for-4.0.1-kernel.patch \
 	file://0001-TBS-fixes-for-4.0.1-kernel.patch \
 	file://0001-STV-Add-PLS-support.patch \
@@ -31,6 +32,7 @@ SRC_URI += "http://source.mynonpublic.com/ceryon/ceryon-linux-${PV}.tgz \
 	file://blindscan2.patch \
 	file://0001-stv090x-optimized-TS-sync-control.patch \
 	file://0002-add-brcm-chips.patch \
+	file://0002-log2-give-up-on-gcc-constant-optimizations.patch \
 	"
 
 S = "${WORKDIR}/linux-${PV}"
@@ -41,6 +43,8 @@ KERNEL_OBJECT_SUFFIX = "ko"
 KERNEL_OUTPUT = "vmlinux"
 KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_IMAGEDEST = "/tmp"
+
+KERNEL_EXTRA_ARGS = "EXTRA_CFLAGS=-Wno-attribute-alias"
 
 FILES_kernel-image = "${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}*"
 
