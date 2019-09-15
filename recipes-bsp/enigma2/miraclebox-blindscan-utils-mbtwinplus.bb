@@ -8,6 +8,7 @@ LICENSE = "CLOSED"
 
 PROVIDES += "virtual/blindscan-dvbc"
 RPROVIDES_${PN} += "virtual/blindscan-dvbc"
+RDEPENDS_${PN} += "libxml2"
 
 SRC_URI = "http://source.mynonpublic.com/broadmedia/g300-dvbc-blindscan-1.0.zip"
 

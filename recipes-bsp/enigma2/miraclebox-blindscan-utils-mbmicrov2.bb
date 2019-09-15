@@ -8,6 +8,7 @@ PACKAGES = "miraclebox-blindscan-dvbs-utils-${MACHINE} miraclebox-blindscan-dvbc
 PROVIDES += "virtual/blindscan-dvbs virtual/blindscan-dvbc"
 RPROVIDES_miraclebox-blindscan-dvbs-utils-${MACHINE} += "virtual/blindscan-dvbs"
 RPROVIDES_miraclebox-blindscan-dvbc-utils-${MACHINE} += "virtual/blindscan-dvbc"
+RDEPENDS_miraclebox-blindscan-dvbc-utils-${MACHINE} += "libxml2"
 
 SRC_URI = "file://ceryon-tda1002x file://ceryon_blindscan"
 
